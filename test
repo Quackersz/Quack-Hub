@@ -1,5 +1,3 @@
---test hub
-
 -- Gui to Lua
 -- Version: 3.4
 
@@ -221,7 +219,7 @@ UICorner_9.Parent = TextLabel_6
 
 -- Scripts:
 
-local function HRBZ_fake_script() -- BGFrame.LocalScript 
+local function POZWJ_fake_script() -- BGFrame.LocalScript 
 	local script = Instance.new('LocalScript', BGFrame)
 
 	local UIS = game:GetService('UserInputService')
@@ -260,8 +258,8 @@ local function HRBZ_fake_script() -- BGFrame.LocalScript
 	end)
 	
 end
-coroutine.wrap(HRBZ_fake_script)()
-local function JBNMI_fake_script() -- TextButton.LocalScript 
+coroutine.wrap(POZWJ_fake_script)()
+local function UTOKT_fake_script() -- TextButton.LocalScript 
 	local script = Instance.new('LocalScript', TextButton)
 
 	script.Parent.MouseButton1Click:connect(function()
@@ -269,8 +267,8 @@ local function JBNMI_fake_script() -- TextButton.LocalScript
 		script.Parent.Parent.Parent.HomeFrame.Visible = false
 	end)
 end
-coroutine.wrap(JBNMI_fake_script)()
-local function DJJV_fake_script() -- TextButton_2.LocalScript 
+coroutine.wrap(UTOKT_fake_script)()
+local function KPTHD_fake_script() -- TextButton_2.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_2)
 
 	script.Parent.MouseButton1Click:connect(function()
@@ -278,17 +276,22 @@ local function DJJV_fake_script() -- TextButton_2.LocalScript
 		script.Parent.Parent.Parent.HomeFrame.Visible = true
 	end)
 end
-coroutine.wrap(DJJV_fake_script)()
-local function MRCCMZV_fake_script() -- TextButton_3.LocalScript 
+coroutine.wrap(KPTHD_fake_script)()
+local function UTZEI_fake_script() -- TextButton_3.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_3)
 
 	script.Parent.MouseButton1Click:Connect(function()
-		getgenv().targetedPart = "Head";
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/Quackersz/Quack-Hub/main/Ph%20Silent%20Aim"))();
+		getgenv().fov = 80 -- Any angle between 0-180 degrees
+		getgenv().visibleCheck = true -- Checks if the target is behind a wall
+		getgenv().randomization = 0 -- A factor for the maximum randomization offset
+		getgenv().headChance = 0.5 -- A factor for the chance to hit a headshot with random hitpart
+		getgenv().targetedPart = "Head" -- "Head", "Torso" or "Random"
+	
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Spoorloos/scripts/main/silent_aim_v2.lua"))()
 	end)
 end
-coroutine.wrap(MRCCMZV_fake_script)()
-local function PCTJHSY_fake_script() -- BGFrame.LocalScript 
+coroutine.wrap(UTZEI_fake_script)()
+local function GNNWGP_fake_script() -- BGFrame.LocalScript 
 	local script = Instance.new('LocalScript', BGFrame)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -300,4 +303,4 @@ local function PCTJHSY_fake_script() -- BGFrame.LocalScript
 		end
 	end)
 end
-coroutine.wrap(PCTJHSY_fake_script)()
+coroutine.wrap(GNNWGP_fake_script)()
